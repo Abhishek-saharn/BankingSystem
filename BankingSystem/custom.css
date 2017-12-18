@@ -1,0 +1,13 @@
+@font-face {
+    font-family: headingFont;
+    src: url(Montserrat-Light.ttf);
+}
+ .mid_container {
+   style : "padding:25px;
+ }
+ .cust_jumbo {
+   left-padding : 5px;
+   background : #003366;
+   font-family : 'Oswald', sans-serif;
+   color : white
+ }

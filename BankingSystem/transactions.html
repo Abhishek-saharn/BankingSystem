@@ -1,0 +1,146 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Transfer Amount</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div class="header">
+        <div class="jumbotron" style="left-padding: 5px; background: #003366; color: white">
+            <div class="">
+                <div class="container">
+                    <h1>ICHD Bank</h1>
+                    <h5>Manage Money Online</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="mid_container">
+        <div class="col-sm-3">
+
+
+            <div class="row">
+                <ul class="list-group">
+                    <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Welcome, Anamica</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Create Account</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Deposit</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Do Withdraw</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Get Balance</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Transfer Amount</li>
+                    <li class="list-group-item" style="background: #003366; color: white">View Report</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Log Out</li>
+                    <li class="list-group-item" style="background: black;"></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-sm-9">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text: bold; background: black; color: white;">
+                        <h4 style="margin-left: 40%">Transfer Amount</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">From</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="fromAccount" placeholder="XXXXXXXXXX7891" disabled="disabled" name="email">
+
+                                    <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="changeAccButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Change account
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="Account1">XXXXXXXXXX2413</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="banksName">Select Bank</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="banksName">
+                                        <option>Allahabad Bank</option>
+                                        <option>Andhra Bank</option>
+                                        <option>Central Bank of India</option>
+                                        <option>State Bank of India</option>
+                                        <option>Punjab National Bank</option>
+                                        <option>Federal Bank</option>
+                                        <option>Vijaya Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="ifscCode">IFSC Code</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" name="recieverAccNumber">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="recieverAccNumber">To</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" placeholder="Reciever Account Number" name="recieverAccNumber">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Amount">Amount</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" placeholder="Amount(In Rs.)" name="Amount">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <h3>Rs. 1111</h3>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember">
+                                            Save this account</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Password">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" name="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-2">
+                                    <button type="submit" class="btn btn-default">Transfer Money</button>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-default">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        
+    </div>
+
+    <div class="footer" style="left-padding: 5px; background: #003366;">
+    </div>
+</body>
+</html>

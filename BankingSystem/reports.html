@@ -1,0 +1,101 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Transaction Report</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div class="header">
+        <div class="jumbotron" style="left-padding: 5px; background: #003366; color: white">
+            <div class="">
+                <div class="container">
+                    <h1>ICHD Bank</h1>
+                    <h5>Manage Money Online</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="mid_container">
+        <div class="col-sm-3">
+
+
+            <div class="row">
+                <ul class="list-group">
+                    <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Welcome, Anamica</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Create Account</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Deposit</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Do Withdraw</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Get Balance</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Transfer Amount</li>
+                    <li class="list-group-item" style="background: #003366; color: white">View Report</li>
+                    <li class="list-group-item" style="background: #003366; color: white">Log Out</li>
+                    <li class="list-group-item" style="background: black;"></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-sm-9">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text: bold; background: black; color: white;">
+                    <h4 style="margin-left: 40%">Transactions Report</h4>
+                </div>
+                <div class="panel-body ">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="banksName">View By</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="banksName">
+                                <option>All</option>
+                                <option>Credits</option>
+                                <option>Withdraw</option>
+                                <option>Transfer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table table-striped sticky-header">
+                        <thead>
+                            <tr>
+                                <th>Transaction Id</th>
+                                <th>Type</th>
+                                <th>Date and Time</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Amount(Rs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1234</td>
+                                <td>Debit</td>
+                                <td>12/12/2012</td>
+                                <td>100002663001</td>
+                                <td>400003300212</td>
+                                <td>12,000</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer" style="left-padding: 5px; background: #003366;">
+    </div>
+</body>
+</html>
