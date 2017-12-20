@@ -1,4 +1,4 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -27,115 +27,206 @@
         </div>
 
     </div>
-    <div class="mid_container">
-        
-        <div class="col-sm-offset-1 col-sm-10">
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" style="text: bold; background: black; color: white;">
-                        <h4 style="margin-left: 40%">Transfer Amount</h4>
-                    </div>
-                    <div class="panel-body">
-                        <form class="form-horizontal">
+    <div class="mid_container">
+        <div class="col-sm-offset-1 col-sm-10">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text: bold; background: black; color: white;">
+                    <h4 style="margin-left: 40%">Transfer Amount</h4>
+                </div>
+                <div class="panel-body">
+                    
+                    <form class="form-horizontal" action="createAccount.aspx" method="post">
+                        
+                        <fieldset>
+                            <legend>Personal Details</legend>
                             <div class="form-group">
-                                <label class="control-label col-sm-2">FirstName</label>
+                                <label class="control-label col-sm-2">First Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="firstname" placeholder="FirstName"  name="FirstName">   
+                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" name="FirstName">
                                 </div>
-                                <label class="control-label col-sm-2">LastName</label>
+                                <label class="control-label col-sm-2">Last Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="lastname" placeholder="LasttName"  name="LasttName">   
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="LastName">
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="banksName">Acc Type</label>
-                                <div class="col-sm-4">
-                                    <select class="form-control" id="banksName">
-                                        <option>Current</option>
-                                        <option>Saving</option>
-                                        
-                                    </select>
-                                </div>
-                                <label class="control-label col-sm-2">Date</label>
-                                <div class="col-sm-4">
-                                    <input type="date" class="form-control" id="birthdate" placeholder="BirthDate"  name="BirthDate">   
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="banksName">Gender</label>
+                                <label class="control-label  col-sm-2" for="gender">Gender</label>
                                 <div class="col-sm-2">
                                     <select class="form-control" id="Select1">
                                         <option>Female</option>
                                         <option>Male</option>
-                                        
                                     </select>
                                 </div>
+                                <label class="control-label col-sm-offset-2 col-sm-2">Date of Birth</label>
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" id="birthdate" placeholder="BirthDate" name="BirthDate">
+                                </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="mobile">Mob.</label>
+                                <label class="control-label col-sm-2">Father's Name</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="Text1" name="FatherName">
+                                </div>
+                                <label class="control-label col-sm-2">Mother's Name</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="Text2" name="MotherName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="maritalStatus">Marital Status</label>
+                                <div class="col-sm-2">
+                                    <select name="maritalStatus" class="form-control" id="Select2">
+                                        <option>Married</option>
+                                        <option>Unmarried</option>
+                                        <option>Divorced</option>
+                                        <option>Widowed</option>
+                                    </select>
+                                </div>
+                                <label class="control-label col-sm-offset-2 col-sm-2" for="nationality">Nationality</label>
+                                <div class="col-sm-2">
+                                    <select class="form-control" name="nationality" id="Select3">
+                                        <option>Indian</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend>Account and Contact Details</legend>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="mobile">Mobile</label>
                                 <div class="col-sm-4">
                                     <input type="number" class="form-control" name="mobile">
                                 </div>
 
-                                <label class="control-label col-sm-2" for="ifscCode">Age</label>
+                                <label class="control-label col-sm-2" for="banksName">Account Type</label>
                                 <div class="col-sm-4">
-                                    <input type="number" class="form-control" name="recieverAccNumber">
+                                    <select class="form-control" id="banksName">
+                                        <option>Current</option>
+                                        <option>Saving</option>
+                                    </select>
                                 </div>
-                                
                             </div>
+
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="PanNumber">PAN</label>
                                 <div class="col-sm-6">
                                     <input type="number" class="form-control" placeholder="PAN Number" name="recieverAccNumber">
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="Amount">Adhar</label>
+                                <label class="control-label col-sm-2" for="Amount">Aadhaar</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" placeholder="Adhar" name="Amount">
+                                    <input type="number" class="form-control" placeholder="Aadhaar" name="Amount">
                                 </div>
                             </div>
-                            
-                            
+
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="cAddress">Current Address</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control" name="cAddress"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="pAddress">Permanent Address</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control" name="pAddress"></textarea>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend>Nominee's Details</legend>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Nominee's Name</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="" placeholder="" name="NomineeName">
+                                </div>
+                                <label for="Nomineerelation" class="control-label col-sm-2">Relationship</label>
+                                <div class="col-sm-4">
+                                    <select name="Nomineerelation" class="form-control" id="Select4">
+                                        <option>Father</option>
+                                        <option>Mother</option>
+                                        <option>Brother</option>
+                                        <option>Sister</option>
+                                        <option>Son</option>
+                                        <option>Daughter</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Nomineemobile">Mobile</label>
+                                <div class="col-sm-4">
+                                    <input type="number" class="form-control" name="Nomineemobile">
+                                </div>
+                                <label class="control-label  col-sm-2">Date of Birth</label>
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" id="NomineeDate1" placeholder="NomineeBirthDate" name="NomineeBirthDate">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="nomineeAddress">Address</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control" name="nomineeAddress"></textarea>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend>Password Details</legend>
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="Password">Set Password</label>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control" name="Password">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="Password">Confirm Password</label>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control" name="Password">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="Address1">Address1</label>
-                                <div class="col-sm-6">
-                                    <textarea class="form-control" name="address1"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="Address2">Address1</label>
-                                <div class="col-sm-6">
-                                    <textarea class="form-control" name="address2"></textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-2">
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </div>
-                                <div class="">
-                                    <button class="btn btn-default">Reset</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                        </fieldset>
 
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-2">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                            <div class="">
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
+                        </div>
+
+
+
+
+                    </form>
+                </div>
             </div>
-        
+
+        </div>
+
     </div>
 
     <div class="footer" style="left-padding: 5px; background: #003366;">
