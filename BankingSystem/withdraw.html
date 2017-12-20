@@ -1,4 +1,4 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,8 @@
     <title>Withdraw Amount</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,7 +19,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="jumbotron" style="left-padding: 5px; background: #003366; color: white">
+        <div class="jumbotron cust_jumbo" style="left-padding: 5px; background: #003366; color: white">
             <div class="">
                 <div class="container">
                     <h1>ICHD Bank</h1>
@@ -27,27 +29,27 @@
         </div>
 
     </div>
-    <div class="mid_container">
+    <div class="mid_container" style="padding: 25px">
         <div class="col-sm-3">
 
 
             <div class="row">
                 <ul class="list-group">
                     <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Welcome, Anamica</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Create Account</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Deposit</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Do Withdraw</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Get Balance</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Transfer Amount</li>
-                    <li class="list-group-item" style="background: #003366; color: white">View Report</li>
-                    <li class="list-group-item" style="background: #003366; color: white">Log Out</li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="userInfo.html" >User Profile</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="deposite.html">Deposit</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="withdraw.html">Withdraw</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="balance.html">Balance</a> </li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="transactions.html">Transfer Amount</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="reports.html">Report</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="HomePage.html">Log out</a></li>
                     <li class="list-group-item" style="background: black;"></li>
                 </ul>
 
+
             </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9" >
 
             <div class="panel panel-default">
                 <div class="panel-heading" style="text: bold; background: black; color: white;">
@@ -78,7 +80,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-2">
-                                <label class="control-label">Current balance</label></div>
+                                <label class="control-label">Current balance</label>
+                            </div>
                             <div class="col-sm-5">
                                 <h4>Rs. 9999</h4>
                             </div>
