@@ -1,0 +1,144 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Create Account</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div class="header">
+        <div class="jumbotron" style="left-padding: 5px; background: #003366; color: white">
+            <div class="">
+                <div class="container">
+                    <h1>ICHD Bank</h1>
+                    <h5>Manage Money Online</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="mid_container">
+        
+        <div class="col-sm-offset-1 col-sm-10">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text: bold; background: black; color: white;">
+                        <h4 style="margin-left: 40%">Transfer Amount</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">FirstName</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="firstname" placeholder="FirstName"  name="FirstName">   
+                                </div>
+                                <label class="control-label col-sm-2">LastName</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="lastname" placeholder="LasttName"  name="LasttName">   
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="banksName">Acc Type</label>
+                                <div class="col-sm-4">
+                                    <select class="form-control" id="banksName">
+                                        <option>Current</option>
+                                        <option>Saving</option>
+                                        
+                                    </select>
+                                </div>
+                                <label class="control-label col-sm-2">Date</label>
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" id="birthdate" placeholder="BirthDate"  name="BirthDate">   
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="banksName">Gender</label>
+                                <div class="col-sm-2">
+                                    <select class="form-control" id="Select1">
+                                        <option>Female</option>
+                                        <option>Male</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="mobile">Mob.</label>
+                                <div class="col-sm-4">
+                                    <input type="number" class="form-control" name="mobile">
+                                </div>
+
+                                <label class="control-label col-sm-2" for="ifscCode">Age</label>
+                                <div class="col-sm-4">
+                                    <input type="number" class="form-control" name="recieverAccNumber">
+                                </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="PanNumber">PAN</label>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" placeholder="PAN Number" name="recieverAccNumber">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Amount">Adhar</label>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" placeholder="Adhar" name="Amount">
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Password">Set Password</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" name="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Password">Confirm Password</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" name="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Address1">Address1</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control" name="address1"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="Address2">Address1</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control" name="address2"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-2">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-default">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        
+    </div>
+
+    <div class="footer" style="left-padding: 5px; background: #003366;">
+    </div>
+</body>
+</html>
