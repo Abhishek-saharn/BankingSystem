@@ -1,0 +1,335 @@
+USE [master]
+GO
+
+/****** Object:  Database [Banking_DB]    Script Date: 12/20/2017 10:56:03 AM ******/
+CREATE DATABASE [Banking_DB]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'Banking_DB', FILENAME = N'C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\Banking_DB.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'Banking_DB_log', FILENAME = N'C:\Program Files (x86)\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\Banking_DB_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+
+ALTER DATABASE [Banking_DB] SET COMPATIBILITY_LEVEL = 120
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Banking_DB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [Banking_DB] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET AUTO_CLOSE OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [Banking_DB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [Banking_DB] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET  DISABLE_BROKER 
+GO
+
+ALTER DATABASE [Banking_DB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [Banking_DB] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET RECOVERY FULL 
+GO
+
+ALTER DATABASE [Banking_DB] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [Banking_DB] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [Banking_DB] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [Banking_DB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [Banking_DB] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+
+ALTER DATABASE [Banking_DB] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [Banking_DB] SET  READ_WRITE 
+GO
+
+
+
+
+
+
+USE [Banking_DB]
+GO
+
+/****** Object:  Table [dbo].[Account]    Script Date: 12/20/2017 10:56:47 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Account](
+	[account_number] [int] NOT NULL,
+	[balance] [int] NOT NULL,
+	[type] [varchar](50) NOT NULL,
+	[created_date] [date] NOT NULL,
+ CONSTRAINT [PK_Account] PRIMARY KEY CLUSTERED 
+(
+	[account_number] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+
+
+
+
+
+USE [Banking_DB]
+GO
+
+/****** Object:  Table [dbo].[Customer]    Script Date: 12/20/2017 10:57:44 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Customer](
+	[id] [int] NOT NULL,
+	[first_name] [varchar](50) NOT NULL,
+	[last_name] [varchar](50) NOT NULL,
+	[DOB] [date] NOT NULL,
+	[gender] [varchar](10) NOT NULL,
+	[PAN] [varchar](50) NOT NULL,
+	[aadhar] [varchar](50) NOT NULL,
+	[account_number] [int] NOT NULL,
+	[mobile_number] [int] NOT NULL,
+	[email] [varchar](50) NOT NULL,
+	[father_name] [varchar](50) NOT NULL,
+	[mother_name] [varchar](50) NOT NULL,
+	[nationality] [varchar](50) NOT NULL,
+	[martial_status] [varchar](10) NOT NULL,
+	[username] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD  CONSTRAINT [FK_Customer_Account] FOREIGN KEY([account_number])
+REFERENCES [dbo].[Account] ([account_number])
+GO
+
+ALTER TABLE [dbo].[Customer] CHECK CONSTRAINT [FK_Customer_Account]
+GO
+
+
+
+
+
+
+USE [Banking_DB]
+GO
+
+/****** Object:  Table [dbo].[Customers]    Script Date: 12/20/2017 10:57:56 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Customers](
+	[id] [int] NOT NULL,
+	[first_name] [varchar](50) NOT NULL,
+	[last_name] [varchar](50) NOT NULL,
+	[DOB] [date] NOT NULL,
+	[gender] [varchar](10) NOT NULL,
+	[PAN] [varchar](50) NOT NULL,
+	[aadhar] [varchar](50) NOT NULL,
+	[account_number] [int] NOT NULL,
+	[mobile_number] [int] NOT NULL,
+	[email] [varchar](50) NOT NULL,
+	[father_name] [varchar](50) NOT NULL,
+	[mother_name] [varchar](50) NOT NULL,
+	[nationality] [varchar](50) NOT NULL,
+	[martial_status] [varchar](10) NOT NULL,
+	[username] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+
+
+
+
+
+
+
+USE [Banking_DB]
+GO
+
+/****** Object:  Table [dbo].[Nominee]    Script Date: 12/20/2017 10:58:09 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Nominee](
+	[id] [int] NOT NULL,
+	[name] [varchar](50) NOT NULL,
+	[DOB] [date] NOT NULL,
+	[relation] [varchar](50) NOT NULL,
+	[address] [varchar](255) NOT NULL,
+	[contact_number] [int] NOT NULL,
+	[customer_account] [int] NOT NULL,
+ CONSTRAINT [PK_Nominees] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Nominee]  WITH CHECK ADD  CONSTRAINT [FK_Nominee_Account] FOREIGN KEY([customer_account])
+REFERENCES [dbo].[Account] ([account_number])
+GO
+
+ALTER TABLE [dbo].[Nominee] CHECK CONSTRAINT [FK_Nominee_Account]
+GO
+
+
+
+
+
+
+
+USE [Banking_DB]
+GO
+
+/****** Object:  Table [dbo].[Transaction]    Script Date: 12/20/2017 10:58:20 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Transaction](
+	[id] [int] NOT NULL,
+	[transaction_type] [varchar](50) NOT NULL,
+	[to_acc] [int] NULL,
+	[from_acc] [int] NOT NULL,
+	[amount] [int] NOT NULL,
+ CONSTRAINT [PK_Transactions] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Transaction]  WITH CHECK ADD  CONSTRAINT [FK_Transaction_Account] FOREIGN KEY([from_acc])
+REFERENCES [dbo].[Account] ([account_number])
+GO
+
+ALTER TABLE [dbo].[Transaction] CHECK CONSTRAINT [FK_Transaction_Account]
+GO
+
