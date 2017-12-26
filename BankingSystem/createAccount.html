@@ -43,36 +43,36 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2">First Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" name="FirstName">
+                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstName">
                                 </div>
                                 <label class="control-label col-sm-2">Last Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="LastName">
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastName">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label  col-sm-2" for="gender">Gender</label>
                                 <div class="col-sm-2">
-                                    <select class="form-control" id="Select1">
+                                    <select name="gender" class="form-control" id="Select1">
                                         <option>Female</option>
                                         <option>Male</option>
                                     </select>
                                 </div>
-                                <label class="control-label col-sm-offset-2 col-sm-2">Date of Birth</label>
+                                <label for="birthDate" class="control-label col-sm-offset-2 col-sm-2">Date of Birth</label>
                                 <div class="col-sm-4">
-                                    <input type="date" class="form-control" id="birthdate" placeholder="BirthDate" name="BirthDate">
+                                    <input type="date" class="form-control" id="birthdate" placeholder="BirthDate" name="birthDate">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Father's Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="Text1" name="FatherName">
+                                    <input type="text" class="form-control" id="Text1" name="fatherName">
                                 </div>
                                 <label class="control-label col-sm-2">Mother's Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="Text2" name="MotherName">
+                                    <input type="text" class="form-control" id="Text2" name="motherName">
                                 </div>
                             </div>
 
@@ -106,9 +106,9 @@
                                     <input type="number" class="form-control" name="mobile">
                                 </div>
 
-                                <label class="control-label col-sm-2" for="banksName">Account Type</label>
+                                <label class="control-label col-sm-2" for="accountType">Account Type</label>
                                 <div class="col-sm-4">
-                                    <select class="form-control" id="banksName">
+                                    <select class="form-control" id="accountType" name="accountType">
                                         <option>Current</option>
                                         <option>Saving</option>
                                     </select>
@@ -116,27 +116,21 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="PanNumber">PAN</label>
+                                <label class="control-label col-sm-2" for="panNumber">PAN</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" placeholder="PAN Number" name="recieverAccNumber">
+                                    <input type="number" class="form-control" placeholder="PAN Number" name="panNumber">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="Amount">Aadhaar</label>
+                                <label class="control-label col-sm-2" for="aadhaar">Aadhaar</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" placeholder="Aadhaar" name="Amount">
+                                    <input type="number" class="form-control" placeholder="Aadhaar" name="aadhaar">
                                 </div>
                             </div>
 
 
 
-                            <div class="form-group">
-                                <label class="control-label col-sm-2" for="cAddress">Current Address</label>
-                                <div class="col-sm-6">
-                                    <textarea class="form-control" name="cAddress"></textarea>
-                                </div>
-                            </div>
 
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="pAddress">Permanent Address</label>
@@ -153,11 +147,11 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Nominee's Name</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="" placeholder="" name="NomineeName">
+                                    <input type="text" class="form-control" id="" placeholder="" name="nomineeName">
                                 </div>
-                                <label for="Nomineerelation" class="control-label col-sm-2">Relationship</label>
+                                <label for="nomineeRelation" class="control-label col-sm-2">Relationship</label>
                                 <div class="col-sm-4">
-                                    <select name="Nomineerelation" class="form-control" id="Select4">
+                                    <select name="nomineeRelation" class="form-control" id="">
                                         <option>Father</option>
                                         <option>Mother</option>
                                         <option>Brother</option>
@@ -169,13 +163,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="Nomineemobile">Mobile</label>
+                                <label class="control-label col-sm-2" for="nomineemobile">Mobile</label>
                                 <div class="col-sm-4">
-                                    <input type="number" class="form-control" name="Nomineemobile">
+                                    <input type="number" class="form-control" name="nomineemobile">
                                 </div>
                                 <label class="control-label  col-sm-2">Date of Birth</label>
                                 <div class="col-sm-4">
-                                    <input type="date" class="form-control" id="NomineeDate1" placeholder="NomineeBirthDate" name="NomineeBirthDate">
+                                    <input type="date" class="form-control" id="" placeholder="NomineeBirthDate" name="nomineeBirthDate">
                                 </div>
                             </div>
 
@@ -192,16 +186,16 @@
                         <fieldset>
                             <legend>Password Details</legend>
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="Password">Set Password</label>
+                                <label class="control-label col-sm-2" for="password">Set Password</label>
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control" name="Password">
+                                    <input type="password" class="form-control" name="password">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="Password">Confirm Password</label>
+                                <label class="control-label col-sm-2" for="comparePassword">Confirm Password</label>
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control" name="Password">
+                                    <input type="password" class="form-control" name="comparePassword">
                                 </div>
                             </div>
                         </fieldset>
