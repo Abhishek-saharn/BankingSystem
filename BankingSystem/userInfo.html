@@ -1,4 +1,4 @@
-<!Doctype html>
+﻿<!Doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, 
     initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Withdraw Amount</title>
+    <title>User Info</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="userInfo.js"></script>
 
 </head>
 <body>
     <div class="header">
+
         <div class="jumbotron cust_jumbo" style="left-padding: 5px; background: #003366; color: white">
             <div class="">
                 <div class="container">
@@ -60,7 +60,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Customer Name:</label></div>
                             <div class="col-sm-5">
-                                <h4>Users Name</h4>
+                                <h4 id="username"></h4>
                             </div>
                         </div>
 
@@ -68,7 +68,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Address:</label></div>
                             <div class="">
-                                <h5>XYZ Street, JKL City, India</h5>
+                                <h5 id="address"></h5>
                             </div>
                         </div>
 
@@ -76,7 +76,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Date of Birth:</label></div>
                             <div class="col-sm-5">
-                                <h4>12/12/2012</h4>
+                                <h4 id="DOB"></h4>
                             </div>
                         </div>
 
@@ -84,7 +84,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">PAN No.</label></div>
                             <div class="col-sm-5">
-                                <h4> GYHPW2315N</h4>
+                                <h4 id="PAN"></h4>
                             </div>
                         </div>
 
@@ -92,7 +92,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Aadhaar No.:</label></div>
                             <div class="col-sm-5">
-                                <h4>123412341234</h4>
+                                <h4 id="aadhaar"></h4>
                             </div>
                         </div>
 
@@ -100,7 +100,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Current balance</label></div>
                             <div class="col-sm-5">
-                                <h4>Rs. 9999</h4>
+                                <h4 id="balance"></h4>
                             </div>
                         </div>
                         
@@ -108,7 +108,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Email:</label></div>
                             <div class="col-sm-5">
-                                <h4>username@gmail.com</h4>
+                                <h4 id="email"></h4>
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Mobile No:</label></div>
                             <div class="col-sm-5">
-                                <h4>8727817212</h4>
+                                <h4 id="mobile_number"></h4>
                             </div>
                         </div>
                        
@@ -124,10 +124,10 @@
                             <div class="col-sm-2">
                                 <label class="control-label">Account No:</label></div>
                             <div class="col-sm-4">
-                                <h4>12345678910121</h4>
+                                <h4 id="account_number"></h4>
                             </div>
                              <div class="col-sm-5">
-                                <h4>Savings Account</h4>
+                                <h4 id="type"></h4>
                             </div>
                         </div>
                     </form>

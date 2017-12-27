@@ -1,4 +1,4 @@
-<!Doctype html>
+﻿<!Doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -56,11 +56,11 @@
                     <h4 style="margin-left: 40%">Transfer Amount</h4>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="post" action="transactions.aspx">
                         <div class="form-group">
                             <label class="control-label col-sm-2">From</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="fromAccount" placeholder="XXXXXXXXXX7891" disabled="disabled" name="email">
+                                <input type="number" class="form-control" id="fromAccount" placeholder="XXXXXXXXXX7891" disabled="disabled" name="fAccountNumber">
 
                                 <div class="dropdown">
                                     <button class="btn btn-default dropdown-toggle" type="button" id="changeAccButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,7 +75,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="banksName">Select Bank</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="banksName">
+                                <select name="toBankName" class="form-control" id="banksName">
                                     <option>Allahabad Bank</option>
                                     <option>Andhra Bank</option>
                                     <option>Central Bank of India</option>
@@ -86,12 +86,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="ifscCode">IFSC Code</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" name="recieverAccNumber">
-                            </div>
-                        </div>
+                       
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="recieverAccNumber">To</label>
                             <div class="col-sm-10">
@@ -101,15 +96,18 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="Amount">Amount</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" placeholder="Amount(In Rs.)" name="Amount">
+                                <input type="number" class="form-control" placeholder="Amount(In Rs.)" name="amount">
                             </div>
                         </div>
+                        <!-- NEED TO  DO LATER-->
                         <div class="form-group">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
                                 <h3>Rs. 1111</h3>
                             </div>
                         </div>
+                        <!--THIS IS ENOUGH-->
+                        <!--
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-4">
                                 <div class="checkbox">
@@ -120,18 +118,19 @@
 
                             </div>
                         </div>
+                        -->
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="Password">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" name="Password">
+                                <input type="password" class="form-control" name="password">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-2">
                                 <button type="submit" class="btn btn-default">Transfer Money</button>
                             </div>
-                            <div class="">
-                                <button class="btn btn-default">Reset</button>
+                            <div class="col-sm-offset-2  col-sm-2">
+                                <button type="reset" class="btn btn-default">Reset</button>
                             </div>
                         </div>
                     </form>

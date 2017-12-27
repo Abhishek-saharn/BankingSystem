@@ -72,6 +72,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="HomePage.html" />
     <Content Include="HomPage.aspx" />
+    <Content Include="createAccount.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
@@ -81,9 +82,11 @@
     <Content Include="reports.html" />
     <Content Include="transactions.aspx" />
     <Content Include="transactions.html" />
-    <Content Include="userInfo.aspx" />
+    <Content Include="userinfo.aspx" />
     <Content Include="userInfo.html" />
+    <Content Include="userInfo.js" />
     <Content Include="Web.config" />
+    <Content Include="createAccount.aspx" />
     <Content Include="withdraw.aspx" />
     <Content Include="withdraw.html" />
   </ItemGroup>
@@ -131,12 +134,19 @@
     <Compile Include="transactions.aspx.designer.cs">
       <DependentUpon>transactions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="userInfo.aspx.cs">
-      <DependentUpon>userInfo.aspx</DependentUpon>
+    <Compile Include="createAccount.aspx.cs">
+      <DependentUpon>createAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="userInfo.aspx.designer.cs">
-      <DependentUpon>userInfo.aspx</DependentUpon>
+    <Compile Include="createAccount.aspx.designer.cs">
+      <DependentUpon>createAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userinfo.aspx.cs">
+      <DependentUpon>userinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userinfo.aspx.designer.cs">
+      <DependentUpon>userinfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="withdraw.aspx.cs">
       <DependentUpon>withdraw.aspx</DependentUpon>

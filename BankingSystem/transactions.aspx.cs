@@ -11,7 +11,15 @@ namespace BankingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string fAccountNumber = Request.Form["fAccountNumber"].ToString();
+            string toBankName = Request.Form["toBankName"].ToString();
+            string recieverAccNumber = Request.Form["recieverAccNumber"].ToString();
+            int amount = Convert.ToInt32(Request.Form["amount"].ToString());
+            string password = Request.Form["password"].ToString();
 
+
+            Response.Write( toBankName + recieverAccNumber + amount + password);
+           
         }
     }
 }
