@@ -1,0 +1,144 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>User Info</title>
+    <!-- Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="userInfo.js?newversion"></script>
+
+</head>
+<body>
+    <div class="header">
+
+        <div class="jumbotron cust_jumbo" style="left-padding: 5px; background: #003366; color: white">
+            <div class="">
+                <div class="container">
+                    <h1>ICHD Bank</h1>
+                    <h5>Manage Money Online</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="mid_container" style="padding: 25px">
+        <div class="col-sm-3">
+
+
+            <div class="row">
+                <ul class="list-group">
+                    <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="userInfo.html" >User Profile</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="deposite.html">Deposit</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="withdraw.html">Withdraw</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="balance.html">Balance</a> </li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="transactions.html">Transfer Amount</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="reports.aspx">Report</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="HomePage.html">Log out</a></li>
+                    <li class="list-group-item" style="background: black;"></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-sm-9">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text: bold; background: black; color: white;">
+                    <h4 style="margin-left: 40%">Contact Details</h4>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="userInfo.aspx">
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Customer Name:</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="full_name"></h4>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Address:</label></div>
+                            <div class="">
+                                <h5 id="address"></h5>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Date of Birth:</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="DOB"></h4>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">PAN No.</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="PAN"></h4>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Aadhaar No.:</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="aadhaar"></h4>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Current balance</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="balance"></h4>
+                            </div>
+                        </div>
+                        
+                         <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Email:</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="email"></h4>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Mobile No:</label></div>
+                            <div class="col-sm-5">
+                                <h4 id="mobile_number"></h4>
+                            </div>
+                        </div>
+                       
+                         <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Account No:</label></div>
+                            <div class="col-sm-4">
+                                <h4 id="account_number"></h4>
+                            </div>
+                             <div class="col-sm-5">
+                                <h4 id="type"></h4>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer" style="left-padding: 5px; background: #003366;">
+    </div>
+</body>
+</html>

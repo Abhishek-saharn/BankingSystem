@@ -1,0 +1,10 @@
+c:\users\666295\documents\visual studio 2012\Projects\BankingSystem\BankingSystem\bin\BankingSystem.dll
+c:\users\666295\documents\visual studio 2012\Projects\BankingSystem\BankingSystem\bin\BankingSystem.pdb
+c:\users\666295\documents\visual studio 2012\Projects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csprojResolveAssemblyReference.cache
+c:\users\666295\documents\visual studio 2012\Projects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.dll
+c:\users\666295\documents\visual studio 2012\Projects\BankingSystem\BankingSystem\obj\Debug\BankingSystem.pdb
+C:\Users\666166\Downloads\BankingSystem-master\BankingSystem\bin\BankingSystem.dll
+C:\Users\666166\Downloads\BankingSystem-master\BankingSystem\bin\BankingSystem.pdb
+C:\Users\666166\Downloads\BankingSystem-master\BankingSystem\obj\Debug\BankingSystem.dll
+C:\Users\666166\Downloads\BankingSystem-master\BankingSystem\obj\Debug\BankingSystem.pdb
+C:\Users\666166\Downloads\BankingSystem-master\BankingSystem\obj\Debug\BankingSystem.csprojResolveAssemblyReference.cache

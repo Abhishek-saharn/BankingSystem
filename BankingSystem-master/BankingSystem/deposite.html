@@ -1,0 +1,110 @@
+
++<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Deposite</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="header">
+        <div class="jumbotron cust_jumbo" style="background: #003366; left-padding: 20px; color: white">
+            <div class="">
+                <div class="container">
+                    <h1>ICHD Bank</h1>
+                    <h5>Manage Money Online</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class=" mid_container" style="padding: 25px">
+        <div class="row">
+
+            <div class="col-xs-3">
+
+
+                <div class="row">
+                    <ul class="list-group">
+                        <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="userInfo.html" >User Profile</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="deposite.html">Deposit</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="withdraw.html">Withdraw</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="balance.html">Balance</a> </li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="transactions.html">Transfer Amount</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="reports.html">Report</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="HomePage.html">Log out</a></li>
+                        <li class="list-group-item" style="background: black;"></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="col-xs-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text: bold; background: black; color: white;">
+                        <h4 style="margin-left: 40%">Deposit Amount in Account</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="username">Account Holder Name:</label>
+                                <div class="col-sm-7">
+                                    <input type="username" class="form-control" id="username" placeholder="Username" name="accHolderName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="Account Number">Account Number:</label>
+                                <div class="col-sm-7">
+                                    <input type="username" class="form-control" id="accountnumber" placeholder="Account Number" name="accNumber">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="pwd">Deposit Amount:</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="DepositAmount" placeholder="Amount in Rs." name="damount">
+                                </div>
+                                <p style="margin: 10px;"><b>Rs.</b></p>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <button type="submit" class="btn btn-default">Deposit Amount</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer" style="left-padding: 5px; background: #003366;">
+    </div>
+
+
+</body>
+</html>

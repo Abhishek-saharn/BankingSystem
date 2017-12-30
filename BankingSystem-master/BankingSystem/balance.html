@@ -1,0 +1,100 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Balance</title>
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="balance.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div class="header">
+        <div class="jumbotron float cust_jumbo">
+            <div class="">
+                <div class="container ">
+                    <h1>ICHD Bank</h1>
+                    <h5>Manage Money Online</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="continer mid_container" style="padding: 25px">
+        <div class="row">
+
+            <div class="col-xs-3">
+                <div class="row">
+                    <ul class="list-group">
+                        <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="userInfo.html">User Profile</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="deposite.html">Deposit</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="withdraw.html">Withdraw</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="balance.html">Balance</a> </li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="transactions.html">Transfer Amount</a></li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="reports.aspx"></a>Report</li>
+                        <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="HomePage.html">Log out</a></li>
+                        <li class="list-group-item" style="background: black;"></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-xs-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text: bold; background: Black; color: white;">
+                        <h4 style="margin-left: 40%">Your Current Balance is as follows</h4>
+                    </div>
+                    <div class="panel-body col-sm-offset-2">
+                        <form class="form-horizontal">
+                           
+                             <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">Account No:</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4 id="account_number"></h4>
+                                </div>
+                                <div class="col-sm-5">
+                                    <h4 id="type"></h4>
+                                </div>
+                            </div>
+                            <div class="form-group"> 
+                                <div class="col-sm-2">
+                                    <label class="control-label">Customer Name:</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <h4 id="full_name"></h4>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">Current balance</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <h4 id="balance"></h4>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer" style="left-padding: 5px; background: #003366;">
+    </div>
+</body>
+</html>
