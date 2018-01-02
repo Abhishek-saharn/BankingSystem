@@ -1,4 +1,4 @@
-<!Doctype html>
+ <!Doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -18,10 +18,68 @@
 
 </head>
 <body>
+
+
+
+
+    <nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ICHD Bank</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#bussperform">Business Performance <span class="sr-only">(current)</span></a></li>
+        <li><a href="#aboutus">About</a></li>
+       
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+          
+        <li style="margin-right:10px"><a type="button" class="btn btn-success navbar-btn"  href="login.html">Log in</a></li>
+          <li style="margin-right:30px"><a type="button" class="btn btn-success navbar-btn"  href="createAccount.html">create Account</a></li>
+       
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    
+
+
+
+
+
+
     <div class="header">
+
+
+
+
+
+
+
+
         <div class="jumbotron cust_jumbo" style="left-padding: 5px; background: #003366; color: white">
+            
+            
+            
+
+
+            
+            
+            
+            
             <div class="">
-                <div class="container">
+                <div class="container-fluid">
                     <h1>ICHD Bank</h1>
                     <h5>Manage Money Online</h5>
                 </div>
@@ -29,9 +87,9 @@
         </div>
 
     </div>
-    <div class="continer mid_container" style="padding: 25px">
-        <div class="row">
-            <div class="col-sm-4">
+    <div class="container " style="padding: 0px">
+        <div class="row" >
+            <div class="col-sm-12">
                 <div id="slider" class="carousel slide" data-ride="carousel">
 
                     <!-- Indicators-->
@@ -75,36 +133,56 @@
                     </div>
                 </div>
             </div>
-            <div style="height: 70%" class="col-sm-8">
-                <div class="row">
-                    <div class="well well-lg">
-                        The central concept of the application is to allow the customer(s) 
-                        to service virtually using the Intrnet without going to the bank and allow customers to open new account,
-                        withdrawl, deposit, close and getting balance using this banking service.The information pertaining
-                        to the customers stores on the RDBMS at the server side (BANK).The Bank services the customers 
-                        according to the customers intention and it updates and backups of each customer transaction accordingly
-                    </div>
-                </div>
-                <div style="height: 30%" class="row">
+           </div>
+        <div class="row " style="margin:50px 0px 0px 0px">
 
-                    <div class="col-sm-6">
-                        <a href="login.html">
-                            <button class="btn btn-lg btn-success" style="float: right; width: 90px; height: 70px">LogIn</button>
-                        </a>
-                    </div>
-                    <div class="col-sm-6">
-                        <a href="createAccount.html">
-                            <button class="btn btn-lg btn-success" style="float: left; height: 70px">Create Account</button>
-                        </a>
-                    </div>
-
-                </div>
-
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;" id="bussperform">
+                  <img class="card-img-top" src="card2.png" alt="Card image cap" width ="150%" height="150%">
+                     <div class="card-body">
+                      <h4 class="card-title">Business Performance</h4>
+                        <p class="card-text">The Core strengths of the Bank is the brand image with rich 122 years
+                             of existence, more than 10 crore customers, CASA base, consistently growing Operating 
+                            Profit, low Cost of Deposits, increasing Small Ticket Business through leveraging RUSU 
+                            (Rural & Semi Urban),
+                             stable Asset Quality and increased pace of digitalization.</p>
+                        
+                      </div>
+                 </div>
             </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;" id="aboutus">
+                  <img class="card-img-top" src="card1.jpg" alt="Card image cap" width ="150%" height="150%">
+                     <div class="card-body">
+                      <h4 class="card-title">How It Works</h4>
+                        <p class="card-text">The information pertaining
+                        to the customers stores on the RDBMS at the server side (BANK).The Bank services the customers 
+                        according to the customers intention and it updates and backups of each customer transaction accordingly</p>
+                        
+                      </div>
+                 </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top" src="card3.jpg" alt="Card image cap" width ="150%" height="150%">
+                     <div class="card-body">
+                      <h4 class="card-title">About Us</h4>
+                        <p >The central concept of the application is to allow the customer(s) 
+                        to service virtually using the Intrnet without going to the bank and allow customers to open new account,
+                        withdrawl, deposit, close and getting balance using this banking service.</p>
+                       
+                      </div>
+                 </div>
+            </div>
+        
+            
+            
+           
         </div>
+         
     </div>
     <div class="footer" style="left-padding: 5px; background: #003366;">
     </div>
 </body>
 </html>
-

@@ -23,7 +23,6 @@ namespace BankingSystem
             string accountType = Request.Form["accountType"].ToString();
             string panNumber = Request.Form["panNumber"].ToString();
             string aadhaar = Request.Form["aadhaar"].ToString();
-            string cAddress = Request.Form["cAddress"].ToString();
             string pAddress = Request.Form["pAddress"].ToString();
             string nomineeName = Request.Form["nomineeName"].ToString();
             string nomineeRelation = Request.Form["nomineeRelation"].ToString();

@@ -57,11 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="balance.aspx" />
     <Content Include="balance.html" />
     <Content Include="bank1.jpg" />
     <Content Include="bank2.jpg" />
     <Content Include="bank3.jpg" />
+    <Content Include="createAccount.js" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -78,11 +78,14 @@
     <Content Include="js\npm.js" />
     <Content Include="login.aspx" />
     <Content Include="login.html" />
+    <Content Include="provideName.js" />
     <Content Include="reports.aspx" />
     <Content Include="reports.html" />
+    <Content Include="balance.js" />
+    <Content Include="reports.js" />
     <Content Include="transactions.aspx" />
     <Content Include="transactions.html" />
-    <Content Include="userinfo.aspx" />
+    <Content Include="fetchData.aspx" />
     <Content Include="userInfo.html" />
     <Content Include="userInfo.js" />
     <Content Include="Web.config" />
@@ -91,13 +94,6 @@
     <Content Include="withdraw.html" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="balance.aspx.cs">
-      <DependentUpon>balance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="balance.aspx.designer.cs">
-      <DependentUpon>balance.aspx</DependentUpon>
-    </Compile>
     <Compile Include="deposite.aspx.cs">
       <DependentUpon>deposite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,12 +137,12 @@
     <Compile Include="createAccount.aspx.designer.cs">
       <DependentUpon>createAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="userinfo.aspx.cs">
-      <DependentUpon>userinfo.aspx</DependentUpon>
+    <Compile Include="fetchData.aspx.cs">
+      <DependentUpon>fetchData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="userinfo.aspx.designer.cs">
-      <DependentUpon>userinfo.aspx</DependentUpon>
+    <Compile Include="fetchData.aspx.designer.cs">
+      <DependentUpon>fetchData.aspx</DependentUpon>
     </Compile>
     <Compile Include="withdraw.aspx.cs">
       <DependentUpon>withdraw.aspx</DependentUpon>
