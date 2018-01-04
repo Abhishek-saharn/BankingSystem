@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
@@ -14,7 +15,7 @@ namespace BankingSystem
 
     public class user
     {
-        public string username { get; set; }
+
         public string full_name { get; set; }
         public string pan { get; set; }
         public string email { get; set; }
@@ -52,6 +53,13 @@ namespace BankingSystem
 
     }
 
+    public class sessionVar
+    {
+
+        public string userEmail { get; set; }
+
+    }
+
     public partial class fetchData : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -65,16 +73,16 @@ namespace BankingSystem
         /// <returns> An user object</returns>
         ///
         [WebMethod]
-        public static user GetUsers()
+        public static user GetUsers(string semail)
         {
             user users = new user();
 
 
-            string strcon = @"server=localhost;Integrated Security=true;database=Banking_DB";
+            string strcon = @"server=localhost;Integrated Security=true;database=Bank_test";
             SqlConnection conn = null;
             SqlCommand comm = null;
             SqlDataReader dr = null;
-            string username, fname, lname, PAN, email, aadhaar, mobile, accountN, balance, type, DOB, address;
+            string fname, lname, PAN, email, aadhaar, mobile, accountN, balance, type, DOB, address;
 
 
 
@@ -84,44 +92,43 @@ namespace BankingSystem
                 conn.Open();
                 comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "userinfo2";
+                comm.CommandText = "userinfoM";
                 comm.CommandType = CommandType.StoredProcedure;
+                comm.Parameters.AddWithValue("@email", semail);
                 dr = comm.ExecuteReader();
 
 
-                //  int i = comm.ExecuteNonQuery();
                 while (dr.Read())
                 {
-                    //  Console.WriteLine(dr[0].ToString()+","+dr[1].ToString()+","+dr[2].ToString());
-                    username = dr[0].ToString();
-                    PAN = dr[1].ToString();
-                    email = dr[2].ToString();
-                    aadhaar = dr[3].ToString();
-                    mobile = dr[4].ToString();
-                    accountN = dr[5].ToString();
-                    balance = dr[6].ToString();
-                    type = dr[7].ToString();
-                    DOB = dr[8].ToString();
-                    address = dr[9].ToString();
-                    fname = dr[10].ToString();
-                    lname = dr[11].ToString();
+
+                    PAN = dr[0].ToString();
+                    email = dr[1].ToString();
+                    aadhaar = dr[2].ToString();
+                    mobile = dr[3].ToString();
+                    accountN = dr[4].ToString();
+                    balance = dr[5].ToString();
+                    type = dr[6].ToString();
+                    DOB = dr[7].ToString();
+                    address = dr[8].ToString();
+                    fname = dr[9].ToString();
+                    lname = dr[10].ToString();
 
 
-                users.username = username;
-                users.pan = PAN;
-                users.email = email;
-                users.aadhaar = aadhaar;
-                users.mobile_number = mobile;
-                users.account_number = accountN;
-                users.balance = balance;
-                users.type = type;
-                users.DOB = DOB;
-                users.address = address;
-                users.full_name = fname + " " + lname;
+
+                    users.pan = PAN;
+                    users.email = email;
+                    users.aadhaar = aadhaar;
+                    users.mobile_number = mobile;
+                    users.account_number = accountN;
+                    users.balance = balance;
+                    users.type = type;
+                    users.DOB = DOB;
+                    users.address = address;
+                    users.full_name = fname + " " + lname;
 
 
                 }
-                
+
 
 
 
@@ -140,38 +147,10 @@ namespace BankingSystem
 
 
 
-
+            
             return users;
 
-            /*string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand(""))
-                {
-                    cmd.Connection = con;
-                    List<user> users = new List<user>();
-
-                    con.Open();
-                    using (SqlDataReader sdr = cmd.ExecuteReader())
-                    {
-                        while (sdr.Read())
-                        {
-                            users.Add(new user
-                            {
-                               CustomerId = sdr["CustomerId"].ToString(),
-                                ContactName = sdr["ContactName"].ToString(),
-                                City = sdr["City"].ToString(),
-                                Country = sdr["Country"].ToString(),
-                                PostalCode = sdr["PostalCode"].ToString(),
-                                Phone = sdr["Phone"].ToString(),
-                                Fax = sdr["Fax"].ToString(),
-                            });
-                        }
-                    }
-                    con.Close();
-                    return users;
-                }
-            }*/
+           
         }
 
 
@@ -387,5 +366,18 @@ namespace BankingSystem
                 }
             }*/
         }
+
+        [WebMethod]
+        public static sessionVar GetSession()
+        {
+
+            string s_email = Convert.ToString(HttpContext.Current.Session["currentUser"]);
+            sessionVar sEmail = new sessionVar();
+            sEmail.userEmail = s_email;
+            return sEmail;
+
+        }
+
+
     }
 }

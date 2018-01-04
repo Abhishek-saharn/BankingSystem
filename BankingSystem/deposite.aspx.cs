@@ -13,7 +13,7 @@ namespace BankingSystem
         {
             string accHolderName = Request.Form["accHolderName"].ToString();
             string accNumber = Request.Form["accNumber"].ToString();
-            int damount = Convert.ToInt32(Request.Form["damount"].ToString());
+            Int64 damount = Convert.ToInt64(Request.Form["damount"].ToString());
 
             Response.Write(accHolderName + accNumber + damount);
 

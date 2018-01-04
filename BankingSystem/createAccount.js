@@ -14,7 +14,7 @@
                     },
                     stringLength: {
                         max: 25,
-                        min: 7,
+                        min: 3,
                         message: 'The Name must be between 7 to 25 characters long'
                     }
                 }
@@ -26,7 +26,7 @@
                     },
                     stringLength: {
                         max: 25,
-                        min: 7,
+                        min: 3,
                         message: 'The Name must be between 7 to 25 characters long'
                     }
                 }
@@ -38,6 +38,18 @@
                     },
                     emailAddress: {
                         message: 'The Email address is not valid'
+                    }
+                }
+            },
+            introducer: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Introducer\'s ICHD account number is required and cannot be empty'
+                    },
+                    stringLength: {
+                        max: 10,
+                        min: 10,
+                        message: 'Enter a valid Account number'
                     }
                 }
             },
