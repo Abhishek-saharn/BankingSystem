@@ -101,7 +101,7 @@
                     }
                 }
             },
-            PAN: {
+            panNumber: {
                 validators: {
                     notEmpty: {
                         message: 'The PAN number is required and cannot be empty'

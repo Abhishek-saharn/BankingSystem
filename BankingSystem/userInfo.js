@@ -58,7 +58,7 @@
                 $('#email').html(email);
                 $('#mobile_number').html(mobile_number);
                 $('#account_number').html(account_number);
-                $('#balance').html(balance);
+                $('#balance').html("Rs. "+ balance);
                 $('#type').html(type);
                 $('#DOB').html(DOB);
                 $('#address').html(address);

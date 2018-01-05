@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="infoServer.js?newversion"></script>
 
 
 </head>
@@ -36,7 +37,7 @@
             <div class="row">
                 <ul class="list-group">
                     <li class="list-group-item" style="background: black; color: white">Account Opertions</li>
-                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="userInfo.html" >User Profile</a></li>
+                    <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="userInfo.html">User Profile</a></li>
                     <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="deposite.html">Deposit</a></li>
                     <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="withdraw.html">Withdraw</a></li>
                     <li class="list-group-item" style="background: #003366; color: white"><a style="text-decoration: none; color: white" href="balance.html">Balance</a> </li>
@@ -55,59 +56,58 @@
                 <div class="panel-heading" style="text: bold; background: black; color: white;">
                     <h4 style="margin-left: 40%">Transfer Amount</h4>
                 </div>
-                <div class="panel-body">
-                    <form class="form-horizontal" method="post" action="transactions.aspx">
-                        <div class="form-group">
-                            <label class="control-label col-sm-2">From</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" id="fromAccount" placeholder="XXXXXXXXXX7891" disabled="disabled" name="fAccountNumber">
+                <div class="panel-body" id="tform">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">From</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="fromAccount" placeholder="1000000000" readonly="readonly" name="fAccountNumber" value="1000000000">
 
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="changeAccButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Change account
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="Account1">XXXXXXXXXX2413</a>
-                                    </div>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="changeAccButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Change account
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="Account1">XXXXXX2413</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="banksName">Select Bank</label>
-                            <div class="col-sm-10">
-                                <select name="toBankName" class="form-control" id="banksName">
-                                    <option>Allahabad Bank</option>
-                                    <option>Andhra Bank</option>
-                                    <option>Central Bank of India</option>
-                                    <option>State Bank of India</option>
-                                    <option>Punjab National Bank</option>
-                                    <option>Federal Bank</option>
-                                    <option>Vijaya Bank</option>
-                                </select>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="banksName">Select Bank</label>
+                        <div class="col-sm-10">
+                            <select name="toBankName" class="form-control" id="banksName">
+                                <option>Allahabad Bank</option>
+                                <option>Andhra Bank</option>
+                                <option>Central Bank of India</option>
+                                <option>State Bank of India</option>
+                                <option>Punjab National Bank</option>
+                                <option>Federal Bank</option>
+                                <option>Vijaya Bank</option>
+                            </select>
                         </div>
-                       
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="recieverAccNumber">To</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" placeholder="Reciever Account Number" name="recieverAccNumber">
-                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="recieverAccNumber">To</label>
+                        <div class="col-sm-10">
+                            <input type="number" id="recieverAccNumber" class="form-control" placeholder="Reciever Account Number" name="recieverAccNumber">
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="Amount">Amount</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" placeholder="Amount(In Rs.)" name="amount">
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="Amount">Amount</label>
+                        <div class="col-sm-10">
+                            <input type="number" id="amount" class="form-control" placeholder="Amount(In Rs.)" name="amount">
                         </div>
-                        <!-- NEED TO  DO LATER-->
-                        <div class="form-group">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-10">
-                                <h3>Rs. 1111</h3>
-                            </div>
+                    </div>
+                    <!-- NEED TO  DO LATER-->
+                    <div class="form-group">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <h3>Rs. 1111</h3>
                         </div>
-                        <!--THIS IS ENOUGH-->
-                        <!--
+                    </div>
+                    <!--THIS IS ENOUGH-->
+                    <!--
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-4">
                                 <div class="checkbox">
@@ -119,21 +119,20 @@
                             </div>
                         </div>
                         -->
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="Password">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="password">
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="Password">Password</label>
+                        <div class="col-sm-10">
+                            <input id="password" type="password" class="form-control" name="password">
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-2">
-                                <button type="submit" class="btn btn-default">Transfer Money</button>
-                            </div>
-                            <div class="col-sm-offset-2  col-sm-2">
-                                <button type="reset" class="btn btn-default">Reset</button>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <button id="transfer"  class="btn btn-default">Transfer Money</button>
                         </div>
-                    </form>
+                        <div class="col-sm-offset-2  col-sm-2">
+                            <button type="reset" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -147,10 +147,10 @@ namespace BankingSystem
 
 
 
-            
+
             return users;
 
-           
+
         }
 
 
@@ -161,63 +161,47 @@ namespace BankingSystem
         ///     List of Transaction
         /// </returns>
         [WebMethod]
-        public static List<Transaction> GetTransations()
+        public static List<Transaction> getTransations()
         {
             List<Transaction> transactions = new List<Transaction>();
             //Transaction transatction = new Transaction();
 
-            string strConn = @"server=localhost;Integrated Security=true;database=CTS";
+            string strConn = @"server=localhost;Integrated Security=true;database=Bank_test";
             SqlConnection conn = null;
             SqlCommand comm = null;
             SqlDataReader dr = null;
 
             try
             {
-                /* conn = new SqlConnection(strConn);
-                 conn.Open();
-               
-                 comm = new SqlCommand();
-                 comm.CommandText = "Procedure_name";
-                 comm.Connection = conn;
-                 comm.CommandType = CommandType.StoredProcedure;
-                
-                 dr = comm.ExecuteReader();*/
+                conn = new SqlConnection(strConn);
+                conn.Open();
 
+                comm = new SqlCommand();
+                comm.CommandText = "Report";
+                comm.Connection = conn;
+                comm.CommandType = CommandType.StoredProcedure;
 
-                transactions.Add(new Transaction
-                {
-                    id = "1121",
-                    from_acc = "10020010001112",
-                    to_acc = "200100222101",
-                    tr_date = "22/11/2001 22:02:12",
-                    transaction_type = "Credit",
-                    amount = "Rs" + "20000",
-                });
-                transactions.Add(new Transaction
-                {
-                    id = "1124",
-                    from_acc = "10020010001112",
-                    to_acc = "200100222101",
-                    tr_date = "22/11/2001 22:02:12",
-                    transaction_type = "Credit",
-                    amount = "Rs" + "9000",
-                });
+                string s_email = Convert.ToString(HttpContext.Current.Session["currentUser"]);
 
-                transactions.Add(new Transaction
-                {
-                    id = "112166",
-                    from_acc = "10020010001112",
-                    to_acc = "200100222101",
-                    tr_date = "22/11/2001 22:02:12",
-                    transaction_type = "Credit",
-                    amount = "Rs" + "10000",
-                });
+                comm.Parameters.AddWithValue("@email", s_email);
+                dr = comm.ExecuteReader();
 
 
                 while (dr.Read())
                 {
+                    transactions.Add(new Transaction
+                    {
+                        id = dr[0].ToString(),
+                        from_acc = dr[3].ToString(),
+                        to_acc = dr[4].ToString(),
+                        tr_date = dr[2].ToString(),
+                        transaction_type = dr[1].ToString(),
+                        amount = "Rs" + dr[5].ToString(),
+                    });
+                    var item = transactions[transactions.Count - 1];
 
-
+                    if (item.to_acc == "")
+                    { item.to_acc = "--"; }
                 }
 
 
@@ -228,9 +212,9 @@ namespace BankingSystem
             }
             finally
             {
-                //dr.Close();
-                //comm.Cancel();
-                //  conn.Close();
+
+                comm.Cancel();
+                conn.Close();
             }
 
 
@@ -238,35 +222,7 @@ namespace BankingSystem
 
             return transactions;
 
-            /*string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand(""))
-                {
-                    cmd.Connection = con;
-                    List<user> users = new List<user>();
 
-                    con.Open();
-                    using (SqlDataReader sdr = cmd.ExecuteReader())
-                    {
-                        while (sdr.Read())
-                        {
-                            users.Add(new user
-                            {
-                               CustomerId = sdr["CustomerId"].ToString(),
-                                ContactName = sdr["ContactName"].ToString(),
-                                City = sdr["City"].ToString(),
-                                Country = sdr["Country"].ToString(),
-                                PostalCode = sdr["PostalCode"].ToString(),
-                                Phone = sdr["Phone"].ToString(),
-                                Fax = sdr["Fax"].ToString(),
-                            });
-                        }
-                    }
-                    con.Close();
-                    return users;
-                }
-            }*/
         }
 
 

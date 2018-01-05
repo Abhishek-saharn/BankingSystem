@@ -76,7 +76,7 @@ namespace BankingSystem
                 int i = comm.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    Console.WriteLine("Updated");
+                    Response.Redirect("userInfo.html");
 
                 }
 
