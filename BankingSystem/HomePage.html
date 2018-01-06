@@ -8,6 +8,10 @@
     <title>Home Page</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="custom.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,42 +21,239 @@
 
 
 </head>
-<body>
+<body style="background-color: #000000; color: white">
 
 
 
 
-    <nav class="navbar navbar-inverse ">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">ICHD Bank</a>
+    <nav class="navbar navbar-inverse navbar-doublerow navbar-trans navbar-fixed-top">
+        <!-- top nav -->
+        <nav class="navbar navbar-top hidden-xs">
+            <div class="container">
+                <!-- left nav top -->
+                <ul class="nav navbar-nav pull-left">
+                    <li><a href="#"><span class="glyphicon glyphicon-thumbs-up text-white"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-globe text-white"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-pushpin text-white"></span></a></li>
+                    <li><a href="#"><span class="text-white">QUESTIONS? CALL: <b>+963000000000</b></span></a></li>
+                </ul>
+                <!-- right nav top -->
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="login.html" class="text-white" style="font-size: 20px">Log In</a></li>
+                    <li><a href="createAccount.html" class="text-white" style="font-size: 20px">Create Account</a></li>
+                </ul>
+            </div>
+            <div class="dividline light-grey"></div>
+        </nav>
+        <!-- down nav -->
+        <nav class="navbar navbar-down">
+            <div class="container">
+                <div class="flex-container">
+                    <div class="navbar-header flex-item">
+                        <div class="navbar-brand" href="#">
+
+
+                            <p style="font-size: 30px">
+                                ICHD Bank
+                    <sub style="font-size: 10px">Manage Money Online</sub>
+                            </p>
+
+
+
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav flex-item hidden-xs">
+                        <li><a href="#bussperform" style="font-size: 15px">Bussiness Performance</a></li>
+                        <li><a href="#howitworks" style="font-size: 15px">How It Works</a></li>
+                        <li><a href="#aboutus" style="font-size: 15px">About Us</a></li>
+                    </ul>
+
+                    <!-- dropdown only moblie -->
+                    <div class="dropdown visible-xs pull-right">
+                        <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-align-justify"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#bussperform">Bussiness Performance</a></li>
+                            <li><a href="#howitworks">How It Works</a></li>
+                            <li><a href="#aboutus">About Us</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+    <!--bg img  -->
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="slider" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                    <li data-target="#slider" data-slide-to="2"></li>
+                </ol>
+                <!--Wrapper for slides-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="bank3.jpg"
+                            alt="bank3.jpg" />
+                        <div class="carousel-caption">
+                            <h1>No.1 Banking Solution in Country</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="bank2.jpg"
+                            alt="bank.jpg" />
+                        <div class="carousel-caption">
+                            <h1>Provide Banking Solutions at your doorsteps.</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="bank1.jpg"
+                            alt="bank1.jpg" />
+                        <div class="carousel-caption">
+                            <h1>Lowest interest rates for Home loans.</h1>
+                        </div>
+                    </div>
+                    <!--Controls -->
+                    <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " style="margin-top: 100px">
+
+        <div class="row " style="margin: 50px 0px 0px 0px">
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;" id="bussperform">
+                    <img class="card-img-top" src="card3.png" alt="Card image cap" width="150%" height="150%">
+                    <div class="card-body">
+                        <h4 class="card-title">Business Performance</h4>
+                        <p class="card-text">
+                            The Core strengths of the Bank is the brand image with rich 122 years
+                             of existence, more than 10 crore customers, CASA base, consistently growing Operating 
+                            Profit, low Cost of Deposits, increasing Small Ticket Business through leveraging RUSU 
+                            (Rural & Semi Urban),
+                             stable Asset Quality and increased pace of digitalization.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;" id="howitworks">
+                    <img class="card-img-top" src="card1.jpg" alt="Card image cap" width="150%" height="150%">
+                    <div class="card-body">
+                        <h4 class="card-title">How It Works</h4>
+                        <p class="card-text">
+                            The information pertaining
+                        to the customers stores on the RDBMS at the server side (BANK).The Bank services the customers 
+                        according to the customers intention and it updates and backups of each customer transaction accordingly
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;" id="aboutus">
+                    <img class="card-img-top" src="card2.jpg" alt="Card image cap" width="150%" height="150%">
+                    <div class="card-body">
+                        <h4 class="card-title">About Us</h4>
+                        <p>
+                            The central concept of the application is to allow the customer(s) 
+                        to service virtually using the Intrnet without going to the bank and allow customers to open new account,
+                        withdrawl, deposit, close and getting balance using this banking service.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#bussperform">Business Performance <span class="sr-only">(current)</span></a></li>
-        <li><a href="#aboutus">About</a></li>
-       
-      </ul>
-        
-      
-      <ul class="nav navbar-nav navbar-right">
-          
-        <li style="margin-right:10px"><a type="button" class="btn btn-success navbar-btn"  href="login.html">Log in</a></li>
-          <li style="margin-right:30px"><a type="button" class="btn btn-success navbar-btn"  href="createAccount.html">create Account</a></li>
-       
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <span class="logo">LOGO</span>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="menu">
+                        <span>Menu</span>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+
+                        <li>
+                            <a href="login.html">LogIn</a>
+                        </li>
+
+                        <li>
+                            <a href="#">info</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="adress">
+                        <span>Contact</span>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i><a href="#">Phone</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Adress</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i><a href="#">Email</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
     
 
 
@@ -60,130 +261,29 @@
 
 
 
-    <div class="header">
+
+
+  
 
 
 
+    <script type="text/javascript">
+
+        // toggle class scroll 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.navbar-trans').addClass('afterscroll');
+            } else {
+                $('.navbar-trans').removeClass('afterscroll');
+            }
+
+        });
+
+        // demo only 
+        // open link in new tab without ugly target="_blank"
+        $("a[href^='http']").attr("target", "_blank");
 
 
-
-
-
-        <div class="jumbotron cust_jumbo" style="left-padding: 5px; background: #003366; color: white">
-            
-            
-            
-
-
-            
-            
-            
-            
-            <div class="">
-                <div class="container-fluid">
-                    <h1>ICHD Bank</h1>
-                    <h5>Manage Money Online</h5>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="container " style="padding: 0px">
-        <div class="row" >
-            <div class="col-sm-12">
-                <div id="slider" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators-->
-                    <ol class="carousel-indicators">
-                        <li data-target="#slider" data-slide-to="0" class="active"></li>
-                        <li data-target="#slider" data-slide-to="1"></li>
-                        <li data-target="#slider" data-slide-to="2"></li>
-                    </ol>
-                    <!--Wrapper for slides-->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="bank1.jpg"
-                                alt="bank.jpg" />
-                            <div class="carousel-caption">
-                                <h2></h2>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="bank2.jpg"
-                                alt="bank.jpg" />
-                            <div class="carousel-caption">
-                                <h2></h2>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="bank3.jpg"
-                                alt="bank.jpg" />
-                            <div class="carousel-caption">
-                                <h2></h2>
-                            </div>
-                        </div>
-                        <!--Controls -->
-                        <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only"></span>
-                        </a>
-                        <a class="right carousel-control" href="#slider" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-           </div>
-        <div class="row " style="margin:50px 0px 0px 0px">
-
-            <div class="col-sm-4">
-                <div class="card" style="width: 20rem;" id="bussperform">
-                  <img class="card-img-top" src="card2.png" alt="Card image cap" width ="150%" height="150%">
-                     <div class="card-body">
-                      <h4 class="card-title">Business Performance</h4>
-                        <p class="card-text">The Core strengths of the Bank is the brand image with rich 122 years
-                             of existence, more than 10 crore customers, CASA base, consistently growing Operating 
-                            Profit, low Cost of Deposits, increasing Small Ticket Business through leveraging RUSU 
-                            (Rural & Semi Urban),
-                             stable Asset Quality and increased pace of digitalization.</p>
-                        
-                      </div>
-                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="width: 20rem;" id="aboutus">
-                  <img class="card-img-top" src="card1.jpg" alt="Card image cap" width ="150%" height="150%">
-                     <div class="card-body">
-                      <h4 class="card-title">How It Works</h4>
-                        <p class="card-text">The information pertaining
-                        to the customers stores on the RDBMS at the server side (BANK).The Bank services the customers 
-                        according to the customers intention and it updates and backups of each customer transaction accordingly</p>
-                        
-                      </div>
-                 </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="card" style="width: 20rem;">
-                  <img class="card-img-top" src="card3.jpg" alt="Card image cap" width ="150%" height="150%">
-                     <div class="card-body">
-                      <h4 class="card-title">About Us</h4>
-                        <p >The central concept of the application is to allow the customer(s) 
-                        to service virtually using the Intrnet without going to the bank and allow customers to open new account,
-                        withdrawl, deposit, close and getting balance using this banking service.</p>
-                       
-                      </div>
-                 </div>
-            </div>
-        
-            
-            
-           
-        </div>
-         
-    </div>
-    <div class="footer" style="left-padding: 5px; background: #003366;">
-    </div>
+    </script>
 </body>
 </html>
