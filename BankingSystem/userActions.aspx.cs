@@ -10,6 +10,9 @@ using System.Configuration;
 using System.Data;
 using System.Web.Services;
 using System.Web.Script.Services;
+using System.Security.Cryptography;
+using System.Text;
+
 namespace BankingSystem
 {
     public class UserData
@@ -28,9 +31,27 @@ namespace BankingSystem
         public string error { get; set; }
 
     }
+    public class WithdrawAmountData {
+        public string error { get; set; }
+    }
     public partial class login : System.Web.UI.Page
     {
+        public static string md5Converter(string password)
+        {
 
+            // Password Encryption using md5 
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] encrypt;
+            UTF8Encoding encode = new UTF8Encoding();
+            encrypt = md5.ComputeHash(encode.GetBytes(password));
+            StringBuilder encryptdata = new StringBuilder();
+            for (int i = 0; i < encrypt.Length; i++)
+            {
+                encryptdata.Append(encrypt[i].ToString());
+            }
+            return encryptdata.ToString();
+            //////////
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -121,6 +142,9 @@ namespace BankingSystem
                 comm.CommandText = "Transfer";
                 comm.CommandType = CommandType.StoredProcedure;
 
+               // password = md5Converter(password);
+
+
                 comm.Parameters.AddWithValue("@from_acc", from_acc);
                 comm.Parameters.AddWithValue("@to_acc", to_acc);
                 comm.Parameters.AddWithValue("@amount", amount);
@@ -193,6 +217,55 @@ namespace BankingSystem
             {
 
                 ddata.error = "Error Occured!! Please Check your credentials.";
+
+            }
+
+
+            return ddata;
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static WithdrawAmountData withdrawAmount(string password, string from_acc, string amount)
+        {
+            WithdrawAmountData ddata = new WithdrawAmountData();
+            string strcon = @"server=localhost;Integrated Security=true;database=Bank_test";
+            SqlConnection conn = null;
+            SqlCommand comm = null;
+            // SqlDataReader dr = null;
+
+            try
+            {
+                conn = new SqlConnection(strcon);
+                conn.Open();
+                comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "Withdraw";
+                comm.CommandType = CommandType.StoredProcedure;
+
+                //password = md5Converter(password);
+
+                comm.Parameters.AddWithValue("@password", password);
+                comm.Parameters.AddWithValue("@from_acc", from_acc);
+                comm.Parameters.AddWithValue("@amount", amount);
+
+
+                int i = comm.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    ddata.error = "NULL";
+
+                }
+                else
+                {
+                    ddata.error = "Transaction Not Successful!!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                ddata.error = ex.Message;
 
             }
 

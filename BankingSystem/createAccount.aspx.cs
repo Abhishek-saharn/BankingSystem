@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace BankingSystem
 {
@@ -36,7 +38,9 @@ namespace BankingSystem
             string nomineeAddress = Request.Form["nomineeAddress"].ToString();
             string password = Request.Form["password"].ToString();
             string comparePassword = Request.Form["comparePassword"].ToString();
-
+           
+          
+            
             string strcon = @"server=localhost;Integrated Security=true;database=Bank_test";
             SqlConnection conn = null;
             SqlCommand comm = null;
@@ -76,6 +80,7 @@ namespace BankingSystem
                 int i = comm.ExecuteNonQuery();
                 if (i > 0)
                 {
+                    HttpContext.Current.Session["currentUser"] = email;
                     Response.Redirect("userInfo.html");
 
                 }

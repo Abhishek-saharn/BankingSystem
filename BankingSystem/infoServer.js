@@ -13,11 +13,10 @@
             alert("Error:" + res.d);
         }
     });
-    function OnSuccess(res){
+    function OnSuccess(res) {
         if (res.d["userEmail"] == "") {
             window.location.replace("HomePage.html");
-        } else{
-            
+        } else {
 
             $('#tform').on('click', '#transfer', function () {
 
@@ -63,7 +62,7 @@
             });
 
             $('#dform').on('click', '#deposit', function () {
-                alert("depo")
+
                 var email = $("#email").val()
                 var from_acc = $("#accountnumber").val()
                 var amount = $("#depositAmount").val()
@@ -74,7 +73,7 @@
                     "amount": amount,
 
                 };
-        
+
                 $.ajax({
                     type: "POST",
                     url: "userActions.aspx/depositAmount",
@@ -103,9 +102,52 @@
                 }
 
             });
+
+            $('#wform').on('click', '#withdraw', function () {
+
+                var password = $("#password").val()
+                var from_acc = $("#fromAccount").val()
+                var amount = $("#amount").val()
+
+                var sendData = {
+                    "from_acc": from_acc,
+                    "password": password,
+                    "amount": amount,
+
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "userActions.aspx/withdrawAmount",
+                    data: JSON.stringify(sendData),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "text json",
+                    success: afterSuccess,
+                    failure: function (response) {
+                        console.log("ERROR:");
+                        console.log(response);
+
+                    },
+                    error: function (response) {
+                        console.log("ERROR:");
+                        console.log(response);
+                    }
+                });
+                function afterSuccess(response) {
+                    console.log(response);
+                    if (response.d.error === "NULL") {
+                        alert("Withdrawl Successfull");
+                    } else {
+                        alert(response.d.error);
+                    }
+
+                }
+
+            });
         }
     }
-   
 
-    
+
+
 });
+

@@ -47,7 +47,6 @@ namespace BankingSystem
     {
         public string account_number { get; set; }
         public string type { get; set; }
-        public string address { get; set; }
         public string balance { get; set; }
         public string full_name { get; set; }
 
@@ -196,7 +195,7 @@ namespace BankingSystem
                         to_acc = dr[4].ToString(),
                         tr_date = dr[2].ToString(),
                         transaction_type = dr[1].ToString(),
-                        amount = "Rs" + dr[5].ToString(),
+                        amount = "Rs. " + dr[5].ToString(),
                     });
                     var item = transactions[transactions.Count - 1];
 
@@ -238,42 +237,46 @@ namespace BankingSystem
             balanceGetSet bal = new balanceGetSet();
 
 
-            string strConn = @"server=localhost;Integrated Security=true;database=CTS";
+            string strConn = @"server=localhost;Integrated Security=true;database=Bank_test";
             SqlConnection conn = null;
             SqlCommand comm = null;
             SqlDataReader dr = null;
 
             try
             {
-                /* conn = new SqlConnection(strConn);
+                 conn = new SqlConnection(strConn);
                  conn.Open();
                
                  comm = new SqlCommand();
-                 comm.CommandText = "Procedure_name";
+                 comm.CommandText = "Balance";
                  comm.Connection = conn;
                  comm.CommandType = CommandType.StoredProcedure;
-                
-                 dr = comm.ExecuteReader();*/
-                string db_fname = "Shubham";
-                string db_lname = "Jadhav";
+                 string s_email = Convert.ToString(HttpContext.Current.Session["currentUser"]);
 
-                string db_type = "Savings Account";
-                string db_Acc_number = "1010101010110101";
-                string db_address = "Vaikund Apartments, shollinagnallurn, chennai";
-                string db_balance = " 2,380";
+                 comm.Parameters.AddWithValue("@email", s_email);
+                 dr = comm.ExecuteReader();
+                string db_fname = "";
+                string db_lname = "";
+
+                string db_type = "";
+                string db_Acc_number = "";
+                string db_balance = "";
                 string db_full_name = db_fname + " " + db_lname;
 
-                bal.account_number = db_Acc_number;
-                bal.type = db_type;
-                bal.address = db_address;
-                bal.balance = "Rs. " + db_balance;
-                bal.full_name = db_full_name;
+                
                 while (dr.Read())
                 {
-
-
+                    db_fname = dr[1].ToString();
+                    db_lname = dr[2].ToString();
+                    db_type = dr[4].ToString();
+                    db_Acc_number = dr[0].ToString();
+                    db_balance = dr[3].ToString();
+                  
                 }
-
+                bal.account_number = db_Acc_number;
+                bal.type = db_type;
+                bal.balance = "Rs. " + db_balance;
+                bal.full_name = db_fname + " " + db_lname;
 
             }
             catch (Exception e)
@@ -291,36 +294,6 @@ namespace BankingSystem
 
 
             return bal;
-
-            /*string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand(""))
-                {
-                    cmd.Connection = con;
-                    List<user> users = new List<user>();
-
-                    con.Open();
-                    using (SqlDataReader sdr = cmd.ExecuteReader())
-                    {
-                        while (sdr.Read())
-                        {
-                            users.Add(new user
-                            {
-                               CustomerId = sdr["CustomerId"].ToString(),
-                                ContactName = sdr["ContactName"].ToString(),
-                                City = sdr["City"].ToString(),
-                                Country = sdr["Country"].ToString(),
-                                PostalCode = sdr["PostalCode"].ToString(),
-                                Phone = sdr["Phone"].ToString(),
-                                Fax = sdr["Fax"].ToString(),
-                            });
-                        }
-                    }
-                    con.Close();
-                    return users;
-                }
-            }*/
         }
 
         [WebMethod]
